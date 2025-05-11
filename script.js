@@ -11,10 +11,10 @@ let drawgrid = () => {
     let markInputs = document.querySelector('.mark_inputs')
     let drawInputs = document.querySelector('.draw_inputs')
     let controlButtons = document.querySelector('.buttons')
-    let maxX = maxXinp.value;
-    let maxY = maxYinp.value;
     let grid = []
     drawButton.addEventListener('click', () => {
+        let maxX = maxXinp.value;
+        let maxY = maxYinp.value;
         if (maxX > 0 && maxY > 0) {
             gridContainer.style.gridTemplateColumns = `repeat(${maxX}, 1fr)`;
             gridContainer.style.gridTemplateRows = `repeat(${maxY}, 1fr)`;
