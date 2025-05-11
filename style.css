@@ -1,0 +1,145 @@
+body {
+background: rgb(34, 34, 34);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 36px;
+
+}
+
+.grid_container {
+  display: grid;
+  max-width: 700px;
+  width: 90%;
+  height: 60vh;
+  max-height: 490px;
+  overflow: scroll;
+}
+.grid_container::-webkit-scrollbar{
+  display: none;
+}
+
+.grid_button {
+  background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)
+}
+.grid_button {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .grid_button:hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+ }
+
+.grid_cell {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputs{
+  font-weight: 700;
+} 
+
+.buttons {
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  justify-self: flex-end;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.inner_buttons{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1{
+  font-size: 13px;
+  color: red;
+}
+
+#maxX {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+}
+
+#maxY {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+.draw_inputs {
+  display: flex;
+  gap: 20px;
+}
+
+.mark_inputs {
+  display: flex;
+  gap: 20px;
+  display: none;
+}
+
+#drawX {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+}
+
+#drawY {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+
+
+}
+
+#mark_button {
+  display: none;
+}
+
+#clear_button {
+  display: none;
+}
+
+#reset_button {
+  display: none;
+}
+ 
