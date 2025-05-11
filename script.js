@@ -28,7 +28,6 @@ let drawgrid = () => {
                     let cell = document.createElement('div');
                     cell.classList.add('grid_cell');
                     gridContainer.appendChild(cell);
-                    cell.innerHTML = `${j},${i}`
                     grid[i][j] = cell
                 }
             }
