@@ -66,7 +66,7 @@ let drawgrid = () => {
             drawXinp.style.border = '1px solid red'
             drawYinp.style.border = '1px solid red'
             removeMark()
-        } else if (grid[y] && grid[y][x]) {
+        } else if (grid[y][x]) { 
             grid[y][x].style.backgroundColor = '#D2D0A0';
         }
     });
@@ -77,4 +77,5 @@ let drawgrid = () => {
         removeMark()
     })
 };
-drawgrid();    
+drawgrid();
+

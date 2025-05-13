@@ -1,5 +1,5 @@
 body {
-background: rgb(34, 34, 34);
+background: #242d34;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -14,13 +14,13 @@ background: rgb(34, 34, 34);
   align-items: center;
   width: 100%;
   gap: 36px;
-}
+} 
 
 .grid_container {
   display: grid;
   max-width: 700px;
   width: 90%;
-  height: 60vh;
+  height: 60vh;  
   max-height: 490px;
   overflow: scroll;
 }
@@ -32,53 +32,53 @@ background: rgb(34, 34, 34);
   background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)
 }
 .grid_button {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
- }
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;             
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
 
- .grid_button:hover {
-   background-position: right center;
-   color: #fff;
-   text-decoration: none;
- }
+.grid_button:hover { 
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
 
 .grid_cell {
-  border: 1px solid white;
-  display: flex;
+  border: 1px solid white; 
+  display: flex; 
   justify-content: center;
   align-items: center;
-}
+} 
 .inputs{
   font-weight: 700;
 } 
 
 .buttons {
   width: 90%;
-  max-width: 500px;
+  max-width: 450px;
   border: 1px solid;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   justify-content: center;
   padding: 10px;
   flex-direction: column;
   align-items: center;
-  background: white;
+  background: rgb(245, 245, 245);
   justify-self: flex-end;
   border-radius: 10px;
   padding: 10px;
-}
+} 
 
 .inner_buttons{
-  display: flex;
+  display: flex; 
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -126,8 +126,6 @@ h1{
   height: 30px;
   outline: none;
   border-radius: 5px;
-
-
 }
 
 #mark_button {
@@ -141,4 +139,3 @@ h1{
 #reset_button {
   display: none;
 }
- 
