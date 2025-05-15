@@ -1,4 +1,4 @@
-let drawgrid = () => {
+let drawGrid = () => {
     let gridContainer = document.querySelector('.grid_container');
     let maxXinp = document.querySelector('#maxX');
     let maxYinp = document.querySelector('#maxY');
@@ -12,9 +12,14 @@ let drawgrid = () => {
     let drawInputs = document.querySelector('.draw_inputs')
     let controlButtons = document.querySelector('.buttons')
     let grid = []
-    drawButton.addEventListener('click', () => {
+    let styleObj = {
+        "border" : "1px solid white",
+        "cell_mark" : "#D2D0A0"
+    }
+    //Generate Grid
+    let genarateGrid = () => {
         let maxX = maxXinp.value;
-        let maxY = maxYinp.value;
+        let maxY = maxYinp.value; 
         if (maxX > 0 && maxY > 0) {
             gridContainer.style.gridTemplateColumns = `repeat(${maxX}, 1fr)`;
             gridContainer.style.gridTemplateRows = `repeat(${maxY}, 1fr)`;
@@ -27,6 +32,7 @@ let drawgrid = () => {
                     let cell = document.createElement('div');
                     cell.classList.add('grid_cell');
                     gridContainer.appendChild(cell);
+                    cell.style.border = styleObj.border
                     grid[i][j] = cell
                 }
             }
@@ -45,7 +51,9 @@ let drawgrid = () => {
             maxXinp.style.border = '1px solid red'
             maxYinp.style.border = '1px solid red'
         }
-    });
+    }
+    drawButton.addEventListener('click', () => genarateGrid());
+    //remove mark
     let removeMark = () => {
         drawXinp.value = '';
         drawYinp.value = '';
@@ -54,7 +62,8 @@ let drawgrid = () => {
             cell.style.backgroundColor = ''
         })
     }
-    markButton.addEventListener('click', () => {
+    //Mark cell 
+    let markCell = () => {
         let x = drawXinp.value;
         let y = drawYinp.value;
 
@@ -66,16 +75,19 @@ let drawgrid = () => {
             drawXinp.style.border = '1px solid red'
             drawYinp.style.border = '1px solid red'
             removeMark()
-        } else if (grid[y][x]) { 
-            grid[y][x].style.backgroundColor = '#D2D0A0';
+        } else if (grid[y][x]) {
+            grid[y][x].style.backgroundColor = styleObj.cell_mark; 
         }
-    });
+    }
+    markButton.addEventListener('click', () => markCell());
+    //reset
     resetButton.addEventListener('click', () => {
         location.reload()
     })
+    //clear
     clearButton.addEventListener('click', () => {
         removeMark()
     })
 };
-drawgrid();
-
+drawGrid(); 
+ 

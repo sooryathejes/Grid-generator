@@ -51,11 +51,11 @@ background: #242d34;
 }
 
 .grid_cell {
-  border: 1px solid white; 
-  display: flex; 
+  /* border: 1px solid white;  */
+  display: flex;  
   justify-content: center;
   align-items: center;
-} 
+}  
 .inputs{
   font-weight: 700;
 } 
@@ -139,3 +139,6 @@ h1{
 #reset_button {
   display: none;
 }
+#reset_button{
+  display: none;
+} 
