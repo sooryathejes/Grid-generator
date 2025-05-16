@@ -1,5 +1,5 @@
 body {
-background: #242d34;
+  background: #242d34;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -7,30 +7,89 @@ background: #242d34;
   margin-top: 40px;
 }
 
+.header {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
 .main {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   gap: 36px;
+}
+
+.add_grid {
+  position: sticky;
+  top: 70px;
+  display: flex;
+  background: white;
+  border: 0;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-weight: 700;
+  gap: 10px;
+  border: 3px solid #232526;
+  cursor: pointer;
 } 
+ 
+.add_grid p {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.add_grid svg {
+  width: 30px;
+}
+
+.grid_img {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 1/1;
+}
+
+.grid_img img {
+  width: 100%;
+}
 
 .grid_container {
   display: grid;
   max-width: 700px;
   width: 90%;
-  height: 60vh;  
+  height: 60vh;
   max-height: 490px;
   overflow: scroll;
 }
-.grid_container::-webkit-scrollbar{
+.delete_button{
+  width: 100%;
+  /* position: absolute; */
+  height: 24px;
+  display: flex;justify-content: end;
+  cursor: pointer;
+
+
+}
+.delete_button svg{
+  /* position: absolute; */
+  justify-self: end;
+  width: 24px;
+  height: 24px;
+}
+.grid_container::-webkit-scrollbar {
   display: none;
 }
 
 .grid_button {
-  background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)
+  cursor: pointer; 
+  background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%)
 }
+
 .grid_button {
   margin: 10px;
   padding: 15px 45px;
@@ -38,13 +97,13 @@ background: #242d34;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;             
-  box-shadow: 0 0 20px #eee;
+  color: white; 
+  box-shadow: 0 0 20px #eee; 
   border-radius: 10px;
   display: block;
 }
 
-.grid_button:hover { 
+.grid_button:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
@@ -52,13 +111,14 @@ background: #242d34;
 
 .grid_cell {
   /* border: 1px solid white;  */
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
-}  
-.inputs{
+}
+
+.inputs {
   font-weight: 700;
-} 
+}
 
 .buttons {
   width: 90%;
@@ -66,7 +126,7 @@ background: #242d34;
   border: 1px solid;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   padding: 10px;
   flex-direction: column;
@@ -75,32 +135,32 @@ background: #242d34;
   justify-self: flex-end;
   border-radius: 10px;
   padding: 10px;
-} 
+}
 
-.inner_buttons{
-  display: flex; 
+.inner_buttons {
+  display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
-h1{
+
+h1 {
   font-size: 13px;
   color: red;
 }
 
-#maxX {
+.maxX {
   width: 60px;
   height: 30px;
   outline: none;
   border-radius: 5px;
 }
 
-#maxY {
+.maxY {
   width: 60px;
   height: 30px;
   outline: none;
   border-radius: 5px;
-
 }
 
 .draw_inputs {
@@ -114,14 +174,14 @@ h1{
   display: none;
 }
 
-#drawX {
+.drawX {
   width: 60px;
   height: 30px;
   outline: none;
   border-radius: 5px;
 }
 
-#drawY {
+.drawY {
   width: 60px;
   height: 30px;
   outline: none;
@@ -139,6 +199,47 @@ h1{
 #reset_button {
   display: none;
 }
-#reset_button{
+
+#reset_button {
   display: none;
-} 
+}
+
+
+@media screen and (min-width:375px) {
+  .grid_img {
+    width: 100%;
+    max-width: 800px;
+    height: 50vh;
+  }
+
+  .grid_img img {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+@media screen and (min-width:620px) {
+  .grid_img {
+    width: 100%;
+    max-width: 800px;
+    height: 50vh;
+  }
+
+  .grid_img img {
+    width: 100%;
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .grid_img {
+    width: 100%;
+    max-width: 800px;
+    height: 50vh;
+  }
+
+  .grid_img img {
+    width: 100%;
+    height: 60vh;
+  }
+}
