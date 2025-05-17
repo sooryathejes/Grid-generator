@@ -96,10 +96,13 @@ let drawGrid = () => {
                 }
             }
         };
-
+        //draw button
         drawButton.addEventListener('click', genarateGrid);
+        //mark button
         markButton.addEventListener('click', markCell);
+        //clear button
         clearButton.addEventListener('click', removeMark);
+        //reset button
         resetButton.addEventListener('click', () => {
             removeMark();
             markInputs.style.display = 'none';
@@ -112,7 +115,7 @@ let drawGrid = () => {
             maxXinp.value = '';
             maxYinp.value = ''
         });
-        //delete grid button
+        //delete button
         deleteButton.addEventListener('click', () => {
             gridElement.remove()
         })
@@ -181,4 +184,4 @@ let drawGrid = () => {
         addGridButton.addEventListener('click', hideImg);
     }
 };
-drawGrid(); 
+drawGrid();
