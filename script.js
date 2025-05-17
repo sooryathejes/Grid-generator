@@ -49,7 +49,7 @@ let drawGrid = () => {
                     gridContainer.style.borderLeft = styleObj.containerBorder
                     cell.style.borderRight = styleObj.border;
                     cell.style.borderLeft = styleObj.border;
-
+  
                     gridContainer.appendChild(cell);
                     grid[i][j] = cell;
                 }
