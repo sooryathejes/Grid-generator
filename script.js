@@ -1,6 +1,6 @@
 let drawGrid = () => {
     let styleObj = {
-        "border": "20px solid #242d34",
+        "border": "10px solid #242d34",
         "cell_mark": "#D2D0A0",
         "containerBorder":"1px solid white"
     };
