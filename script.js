@@ -1,7 +1,8 @@
 let drawGrid = () => {
     let styleObj = {
-        "border": "2px solid white",
-        "cell_mark": "#D2D0A0"
+        "border": "20px solid #242d34",
+        "cell_mark": "#D2D0A0",
+        "containerBorder":"1px solid white"
     };
 
 
@@ -22,11 +23,11 @@ let drawGrid = () => {
 
         let grid = [];
 
-        // Draw grid
+        // Draw grid 
         let genarateGrid = () => {
             let maxX = maxXinp.value;
             let maxY = maxYinp.value;
-
+ 
             if (isNaN(maxX) || isNaN(maxY) || maxX <= 0 || maxY <= 0) {
                 alert("Enter a number greater than 0");
                 maxXinp.style.border = '1px solid red';
@@ -44,7 +45,11 @@ let drawGrid = () => {
                 for (let j = 1; j <= maxX; j++) {
                     let cell = document.createElement('div');
                     cell.classList.add('grid_cell');
-                    cell.style.border = styleObj.border;
+                    gridContainer.style.borderBottom = styleObj.containerBorder
+                    gridContainer.style.borderLeft = styleObj.containerBorder
+                    cell.style.borderRight = styleObj.border;
+                    cell.style.borderLeft = styleObj.border;
+
                     gridContainer.appendChild(cell);
                     grid[i][j] = cell;
                 }
@@ -185,3 +190,4 @@ let drawGrid = () => {
     }
 };
 drawGrid();
+ 

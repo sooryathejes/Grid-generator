@@ -10,8 +10,7 @@ body {
 .header {
   color: white;
   font-size: 40px;
-  text-align: center;
-  background-color: #020202;
+  text-align: center; 
 }
 
 .main {
@@ -20,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100%; 
   gap: 36px;
 }
 
@@ -132,7 +131,7 @@ body {
   padding: 10px;
   flex-direction: column;
   align-items: center;
-  background: rgb(245, 245, 245);
+  background: white;
   justify-self: flex-end;
   border-radius: 10px;
   padding: 10px;

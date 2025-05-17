@@ -1,5 +1,4 @@
 -All events are write in a function.
 -Transfer html code to js as inner html.
 -All queryselectors are written inside a addListners function for adding multiple independent grids.
--changed reset function
-  
+-changed reset function 
