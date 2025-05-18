@@ -113,22 +113,22 @@ body {
   /* border: 1px solid white;  */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
-
+ 
 .inputs {
-  font-weight: 700;
-}
+  font-weight: 700;  
+} 
 
 .buttons {
-  width: 90%;
-  max-width: 450px;
+  width: 90%; 
+  max-width: 450px; 
   border: 1px solid;
   display: flex;
-  gap: 20px;
+  gap: 20px; 
   flex-wrap: wrap;
   justify-content: center;
-  padding: 10px;
+  padding: 10px; 
   flex-direction: column;
   align-items: center;
   background: white;

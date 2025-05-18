@@ -190,4 +190,3 @@ let drawGrid = () => {
     }
 };
 drawGrid();
- 
